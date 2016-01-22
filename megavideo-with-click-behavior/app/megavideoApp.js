@@ -11,8 +11,8 @@ angular.module('megaVideoDemo', []).
 					var sourceTypes = {
 						webm: { type: 'video/webm'},
 						mp4: { type: 'video/mp4'},
-						ogg: { type: 'video/ogg'}
-					}
+						ogg: { type: 'video/<o></o>gg'}
+					};
 					for (source in sourceTypes) {
 						if (attrs.hasOwnProperty(source)) {
 							scope.sources.push(
@@ -37,7 +37,7 @@ angular.module('megaVideoDemo', []).
 					stop: function() {
 						videoPlayer.pause();
 						videoPlayer.currentTime = 0;
-						scope.video.status = 'stop'
+						scope.video.status = 'stop';
                     },
                     togglePlay: function() {
                         scope.video.status == 'play' ? this.pause() : this.play();
@@ -47,5 +47,5 @@ angular.module('megaVideoDemo', []).
                 };
 			},
 
-        }
+        };
     });
